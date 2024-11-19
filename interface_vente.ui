@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Interface_Vente</class>
+ <widget class="QWidget" name="Interface_Vente">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1213</width>
+    <height>655</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Interface_Vente</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Style pour les QPushButton */
+QPushButton {
+    background-color: #4CAF50;  /* Vert */
+    color: white;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    padding: 10px;
+	font-weight: bold;
+	font-size: 15px
+}
+
+QPushButton:hover {
+    background-color: #45a049;  /* Vert plus foncé */
+}
+
+QPushButton:pressed {
+    background-color: #388E3C;  /* Vert encore plus foncé */
+}
+
+/* Style pour les QLineEdit */
+QLineEdit {
+    background-color: white;
+    border: 1px solid #4CAF50;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+}
+
+QComboBox{
+	background-color: white;
+    border: 1px solid #4CAF50;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+}
+
+/* Style pour les QDateEdit */
+QDateEdit {
+    background-color: white;
+    border: 1px solid #4CAF50;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+}
+
+/* Style pour les QSpinBox */
+QSpinBox {
+    background-color: white;
+    border: 1px solid #4CAF50;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+}
+
+/* Style pour les QDoubleSpinBox */
+QDoubleSpinBox {
+    background-color: white;
+    border: 1px solid #4CAF50;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+}
+
+/* Style pour le QTableView */
+QTableView {
+    background-color: white;
+    gridline-color: #4CAF50;
+    border: 1px solid #4CAF50;
+	color:black;
+
+}
+QTableView:pressed {
+	bacground-color:rgb(188, 188, 188);
+	 gridline-color: #4CAF50;
+    border: 1px solid #4CAF50;
+	color:black;
+}
+
+
+QHeaderView::section {
+    background-color: #4CAF50;
+    color: white;
+    padding: 4px;
+    border: 1px solid #4CAF50;
+}
+
+/* Style pour les QLabel */
+QLabel {
+    color: black;
+    font-weight: bold;
+}
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0" colspan="2">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="gestion_client_pushButton">
+       <property name="text">
+        <string>Gestion des clients </string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="commande_non_satistfaite_pushButton">
+       <property name="text">
+        <string>Gestion des commandes non satisfaites</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="deconnexion_pushButton">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{	
+background-color: white;  /* Vert */
+    color: red;
+    border: 1px solid red;
+    border-radius: 0px;
+    padding: 5px;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+QPushButton:hover {
+    background-color: red;  /* Vert plus foncé */
+	color: white;
+}
+
+QPushButton:pressed {
+    background-color: rgb(179, 33, 20) ;/* Vert encore plus foncé */
+	color: white; 
+}</string>
+       </property>
+       <property name="text">
+        <string>Déconnexion</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:700; color:#55ff00;&quot;&gt;Enregistrement des ventes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" rowspan="2">
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Code du produit</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="code_produit_lineEdit"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Nom du produit</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="nom_produit_lineEdit"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Type de produit</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="type_produit_lineEdit"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>Prix unitaire</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QDoubleSpinBox" name="prix_unitaire_doubleSpinBox">
+       <property name="maximum">
+        <double>1000000000000000000.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>Quantité du produit</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QSpinBox" name="quantite_produit_spinBox">
+       <property name="maximum">
+        <number>1000000000</number>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string>Montant</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QDoubleSpinBox" name="montant_doubleSpinBox">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="maximum">
+        <double>99999999999999991433150857216.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0" colspan="2">
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QPushButton" name="AjouterPanier_pushButton">
+         <property name="text">
+          <string>Ajouter au papier</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="Annuler_pushButton">
+         <property name="text">
+          <string>Annuler</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="supprimer_pushButton">
+         <property name="text">
+          <string>Supprimer</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="viderPanier_pushButton">
+         <property name="text">
+          <string>Vider le panier</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item row="2" column="1">
+    <layout class="QFormLayout" name="formLayout_3">
+     <item row="0" column="0" colspan="2">
+      <widget class="QLabel" name="label_15">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Facturation&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_9">
+       <property name="text">
+        <string>Numéro de la facture</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="numero_facture_lineEdit"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_11">
+       <property name="text">
+        <string>Date</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QDateEdit" name="date_courante_dateEdit"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_10">
+       <property name="text">
+        <string>Nom du client</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QComboBox" name="nomClient_comboBox"/>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_12">
+       <property name="text">
+        <string>Conctate du client </string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="contact_lineEdit"/>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="label_16">
+       <property name="text">
+        <string>Adresse du client</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLineEdit" name="adresse_lineEdit"/>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Statut de la vente</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QComboBox" name="statut_comboBox">
+       <item>
+        <property name="text">
+         <string>Satisfait</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Non satisfait</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="3" column="1">
+    <widget class="QTableView" name="detailVente_tableView"/>
+   </item>
+   <item row="4" column="0" colspan="2">
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QLabel" name="label_13">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Montant total de la facture&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDoubleSpinBox" name="montant_total_doubleSpinBox">
+       <property name="maximum">
+        <double>9999999999999999583119736832.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="ValiderFacture_pushButton">
+       <property name="text">
+        <string>Enregistrer la vente</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Imprimer_pushButton">
+       <property name="text">
+        <string>Imprimer facture</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="modifier_pushButton">
+       <property name="text">
+        <string>Actualiser</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="5" column="0" colspan="2">
+    <widget class="QLabel" name="label_14">
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Liste des commandes satisfaites&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0" colspan="2">
+    <widget class="QTableView" name="tableView"/>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

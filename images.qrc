@@ -1,0 +1,29 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/logo.jpg</file>
+        <file>images/accueil_icone.jpg</file>
+        <file>images/images.png</file>
+        <file>images/backgroundVert.jpg</file>
+        <file>images/backVert.jpg</file>
+        <file>images/BonCommandes.jpg</file>
+        <file>images/Clients.png</file>
+        <file>images/Commande.png</file>
+        <file>images/commandeNonSatisfaite.png</file>
+        <file>images/comptabilite.png</file>
+        <file>images/EnregistrementDesProduis.png</file>
+        <file>images/Factures.png</file>
+        <file>images/Fournisseurs.jpg</file>
+        <file>images/GestionStock.png</file>
+        <file>images/notification.png</file>
+        <file>images/Rapport1.png</file>
+        <file>images/Rapport2.png</file>
+        <file>images/SuiviProduits.jpg</file>
+        <file>images/Ventes.png</file>
+        <file>images/ajouter.jpeg</file>
+        <file>images/annuler.png</file>
+        <file>images/delete.png</file>
+        <file>images/modifier.png</file>
+        <file>images/rechercherverte.jpeg</file>
+        <file>images/valider.jpg</file>
+    </qresource>
+</RCC>

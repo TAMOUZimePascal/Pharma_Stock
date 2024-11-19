@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Enregistrer_Fournisseur</class>
+ <widget class="QWidget" name="Enregistrer_Fournisseur">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1121</width>
+    <height>836</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>PharmaStock - Gestion des fournisseurs</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="images.qrc">
+    <normaloff>:/images/Fournisseurs.jpg</normaloff>:/images/Fournisseurs.jpg</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+  font-family: Arial, sans-serif;
+
+}
+
+/* Style pour les QPushButton */
+QPushButton {
+    background-color: #4CAF50;  /* Vert */
+    color: white;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    padding: 10px;
+	font-weight: bold;
+	font-size: 15px
+}
+
+QPushButton:hover {
+    background-color: #45a049;  /* Vert plus foncé */
+}
+
+QPushButton:pressed {
+    background-color: #388E3C;  /* Vert encore plus foncé */
+}
+
+/* Style pour les QLineEdit */
+QLineEdit {
+    background-color: white;
+    border: 1px solid #4CAF50;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+}
+
+QComboBox{
+	background-color: white;
+    border: 1px solid #4CAF50;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+}
+
+/* Style pour les QDateEdit */
+QDateEdit {
+    background-color: white;
+    border: 1px solid #4CAF50;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+}
+
+/* Style pour les QSpinBox */
+QSpinBox {
+    background-color: white;
+    border: 1px solid #4CAF50;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+}
+
+/* Style pour les QDoubleSpinBox */
+QDoubleSpinBox {
+    background-color: white;
+    border: 1px solid #4CAF50;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+}
+
+/* Style pour le QTableView */
+QTableView {
+    background-color: white;
+    gridline-color: #4CAF50;
+    border: 1px solid #4CAF50;
+	color:black;
+
+}
+QTableView:pressed {
+	bacground-color:rgb(188, 188, 188);
+	 gridline-color: #4CAF50;
+    border: 1px solid #4CAF50;
+	color:black;
+}
+
+
+QHeaderView::section {
+    background-color: #4CAF50;
+    color: white;
+    padding: 4px;
+    border: 1px solid #4CAF50;
+}
+
+/* Style pour les QLabel */
+QLabel {
+    color: black;
+    font-weight: bold;
+}
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="3" column="0">
+      <widget class="QTableView" name="tableView"/>
+     </item>
+     <item row="4" column="0">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QPushButton" name="accueil_pushButton">
+         <property name="text">
+          <string>Accueil</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="Suprimer_pushButton">
+         <property name="styleSheet">
+          <string notr="true">background-color:red;
+color: white;</string>
+         </property>
+         <property name="text">
+          <string>Suprimer</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="Imprimer_pushButton">
+         <property name="styleSheet">
+          <string notr="true">background-color:white;
+color:black;</string>
+         </property>
+         <property name="text">
+          <string>Imprimer</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:36pt; font-weight:600;&quot;&gt;Enregistrement des fournisseurs&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <layout class="QFormLayout" name="formLayout">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetFixedSize</enum>
+       </property>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Nom </string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="Nom_fournisseurs_lineEdit"/>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Contact</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="Contact_fournisseurs_lineEdit"/>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Adresse électronique</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLineEdit" name="Adresse_electronique_fournisseurs_lineEdit"/>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>Adresse</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QLineEdit" name="Adresse_fournisseurs_lineEdit"/>
+       </item>
+       <item row="7" column="1">
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QPushButton" name="Enregistrer_pushButton">
+           <property name="text">
+            <string>Enregistrer</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="Modifier_pushButton">
+           <property name="styleSheet">
+            <string notr="true">background-color:blue;
+color:white;</string>
+           </property>
+           <property name="text">
+            <string>Modifier</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="AnnulerpushButton">
+           <property name="styleSheet">
+            <string notr="true">background-color:white;
+color:black;</string>
+           </property>
+           <property name="text">
+            <string>Annuler</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>Code</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="code_fournisseur">
+         <property name="readOnly">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:36pt;&quot;&gt;Liste des fournisseurs&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
+ <connections/>
+</ui>

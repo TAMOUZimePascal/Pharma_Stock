@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CommandeNonSatisfaite</class>
+ <widget class="QWidget" name="CommandeNonSatisfaite">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1279</width>
+    <height>495</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Commande non satisfaite</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="images.qrc">
+    <normaloff>:/images/Commande.png</normaloff>:/images/Commande.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Style pour les QPushButton */
+QPushButton {
+    background-color: #4CAF50;  /* Vert */
+    color: white;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    padding: 10px;
+	font-weight: bold;
+	font-size: 15px
+}
+
+QPushButton:hover {
+    background-color: #45a049;  /* Vert plus foncé */
+}
+
+QPushButton:pressed {
+    background-color: #388E3C;  /* Vert encore plus foncé */
+}
+
+/* Style pour les QLineEdit */
+QLineEdit {
+    background-color: white;
+    border: 1px solid #4CAF50;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+}
+
+/* Style pour les QDateEdit */
+QDateTimeEdit {
+    background-color: white;
+    border: 1px solid #4CAF50;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+}
+
+QComboBox{
+ background-color: white;
+    border: 1px solid #4CAF50;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+}
+
+/* Style pour les QSpinBox */
+QSpinBox {
+    background-color: white;
+    border: 1px solid #4CAF50;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+}
+
+/* Style pour les QDoubleSpinBox */
+QDoubleSpinBox {
+    background-color: white;
+    border: 1px solid #4CAF50;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+}
+
+/* Style pour le QTableView */
+QTableView {
+    background-color: white;
+    gridline-color: #4CAF50;
+    border: 1px solid #4CAF50;
+	color:black;
+
+}
+
+
+/*QTableView::item {
+    border: 1px solid #4CAF50;
+}*/
+
+QHeaderView::section {
+    background-color: rgb(18, 40, 241);
+    color: white;
+    padding: 4px;
+    border: 1px solid #4CAF50;
+}
+
+/* Style pour les QLabel */
+QLabel {
+    color: black;
+    font-weight: bold;
+}
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="3" column="0">
+    <widget class="QTableView" name="tableView"/>
+   </item>
+   <item row="1" column="2">
+    <widget class="QSplitter" name="splitter_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QPushButton" name="modifier_pushButton">
+      <property name="text">
+       <string>Modifier statut de la vente</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="text">
+       <string>Imprimer</string>
+      </property>
+     </widget>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <widget class="QSplitter" name="splitter_3">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700;&quot;&gt;Code de la vente&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="rechercher_lineEdit"/>
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>Code Produit </string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="codeProduit_lineEdit"/>
+     <widget class="QLabel" name="label_6">
+      <property name="text">
+       <string>Saisir la quantité</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="qte_spinBox"/>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="3">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:700; color:#00aa00;&quot;&gt;PharmaStock&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1" colspan="2">
+    <widget class="QTableView" name="tableView_2"/>
+   </item>
+   <item row="2" column="0" colspan="3">
+    <widget class="QSplitter" name="splitter">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700;&quot;&gt;Liste des ventes non satisfaites&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:700;&quot;&gt;Détail de la vente&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
+ <connections/>
+</ui>

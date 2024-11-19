@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Compta</class>
+ <widget class="QWidget" name="Compta">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1610</width>
+    <height>776</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>PharmaStock - Trésorerie</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="images.qrc">
+    <normaloff>:/images/comptabilite.png</normaloff>:/images/comptabilite.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Style pour les QPushButton */
+QPushButton {
+    background-color: #4CAF50;  /* Vert */
+    color: white;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    padding: 10px;
+	font-weight: bold;
+	font-size: 15px
+}
+
+QPushButton:hover {
+    background-color: #45a049;  /* Vert plus foncé */
+}
+
+QPushButton:pressed {
+    background-color: #388E3C;  /* Vert encore plus foncé */
+}
+
+/* Style pour les QLineEdit */
+QLineEdit {
+    background-color: white;
+    border: 1px solid #4CAF50;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+}
+
+/* Style pour les QDateEdit */
+QDateTimeEdit {
+    background-color: white;
+    border: 1px solid #4CAF50;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+}
+
+QComboBox{
+ background-color: white;
+    border: 1px solid #4CAF50;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+}
+
+/* Style pour les QSpinBox */
+QSpinBox {
+    background-color: white;
+    border: 1px solid #4CAF50;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+}
+
+/* Style pour les QDoubleSpinBox */
+QDoubleSpinBox {
+    background-color: white;
+    border: 1px solid #4CAF50;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+}
+
+/* Style pour le QTableView */
+QTableView {
+    background-color: white;
+    gridline-color: #4CAF50;
+    border: 1px solid #4CAF50;
+	color:black;
+
+}
+
+
+/*QTableView::item {
+    border: 1px solid #4CAF50;
+}*/
+
+QHeaderView::section {
+    background-color: rgb(18, 40, 241);
+    color: white;
+    padding: 4px;
+    border: 1px solid #4CAF50;
+}
+
+/* Style pour les QLabel */
+QLabel {
+    color: black;
+    font-weight: bold;
+}
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="1" rowspan="2">
+    <layout class="QFormLayout" name="formLayout_7">
+     <item row="0" column="0" colspan="2">
+      <widget class="QGroupBox" name="formGroupBox_5">
+       <property name="title">
+        <string>Nouvelle transaction</string>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+       <layout class="QFormLayout" name="formLayout_8">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_23">
+          <property name="text">
+           <string>Code transaction</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="code_transaction_lineEdit"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_24">
+          <property name="text">
+           <string>Date</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_35">
+          <property name="text">
+           <string>Action</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QComboBox" name="action_comboBox">
+          <item>
+           <property name="text">
+            <string>Encaissement</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Décaissement</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_36">
+          <property name="text">
+           <string>Motif</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="motif_lineEdit"/>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="label_37">
+          <property name="text">
+           <string>Dépositaire</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLineEdit" name="Depositaire_lineEdit"/>
+        </item>
+        <item row="5" column="1">
+         <widget class="QComboBox" name="moyen_payement_comboBox">
+          <item>
+           <property name="text">
+            <string>Carte Bancaire</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Espèces</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Chèque</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Débiteurs</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Autres</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLabel" name="label_38">
+          <property name="text">
+           <string>Montant</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1">
+         <widget class="QDoubleSpinBox" name="montant_doubleSpinBox">
+          <property name="maximum">
+           <double>999999999999.989990234375000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="label_39">
+          <property name="text">
+           <string>Moyen de payement</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QDateTimeEdit" name="dateTimeEdit">
+          <property name="calendarPopup">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="1" column="0" colspan="2">
+      <widget class="QPushButton" name="enregistrer_pushButton_4">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Enregistrer</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>:/image projet/ajouter.jpeg</normaloff>:/image projet/ajouter.jpeg</iconset>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0" colspan="2">
+      <widget class="QPushButton" name="modifier_pushButton_4">
+       <property name="styleSheet">
+        <string notr="true">background-color:blue;</string>
+       </property>
+       <property name="text">
+        <string>Modifier</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0" colspan="2">
+      <widget class="QPushButton" name="supprimer_pushButton_4">
+       <property name="styleSheet">
+        <string notr="true">background-color:red;</string>
+       </property>
+       <property name="text">
+        <string>Supprimer</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>:/image projet/supprimer.jpeg</normaloff>:/image projet/supprimer.jpeg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0" colspan="2">
+      <widget class="QPushButton" name="annuler_pushButton_4">
+       <property name="styleSheet">
+        <string notr="true">background-color:white;
+color: black;</string>
+       </property>
+       <property name="text">
+        <string>Annuler</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0" colspan="2">
+      <widget class="QPushButton" name="pushButton_6">
+       <property name="styleSheet">
+        <string notr="true">background-color:white;
+color: black;</string>
+       </property>
+       <property name="text">
+        <string>Imprimer</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0" colspan="2">
+      <widget class="QPushButton" name="editer_facture_pushButton_5">
+       <property name="styleSheet">
+        <string notr="true">background-color:white;
+color: black;</string>
+       </property>
+       <property name="text">
+        <string>Accueil</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLabel" name="label_40">
+       <property name="text">
+        <string>TOTAL SORTIE     :</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QLabel" name="sortie_label">
+       <property name="styleSheet">
+        <string notr="true">color: red;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="0">
+      <widget class="QLabel" name="label_42">
+       <property name="text">
+        <string>TOTAL ENTREE     :</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="1">
+      <widget class="QLabel" name="entree_label">
+       <property name="styleSheet">
+        <string notr="true">color: #4CAF50;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="0">
+      <widget class="QLabel" name="label_41">
+       <property name="text">
+        <string>SOLDE                 :</string>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="1">
+      <widget class="QLabel" name="solde_label">
+       <property name="styleSheet">
+        <string notr="true">color: blue;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QLabel" name="label_43">
+     <property name="styleSheet">
+      <string notr="true">background-color:green;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout_8">
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#0055ff;&quot;&gt;Récapitulatif des mouvements de caisse &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTableView" name="tableView_8">
+       <property name="textElideMode">
+        <enum>Qt::ElideRight</enum>
+       </property>
+       <property name="gridStyle">
+        <enum>Qt::SolidLine</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout_7">
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#0055ff;&quot;&gt;TABLEAU DE FLUX DE TRESORERIE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTableView" name="tableView"/>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
+ <connections/>
+</ui>
